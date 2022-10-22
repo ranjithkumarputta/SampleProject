@@ -1,0 +1,1 @@
+Feature: Sample feature file created for demo
