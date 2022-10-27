@@ -1,4 +1,4 @@
-package src.test.java.pages;
+package pages;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
