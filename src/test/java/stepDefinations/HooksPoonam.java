@@ -3,7 +3,7 @@ package stepDefinations;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class HooksPoonam extends CommonFunctions{
+public class HooksPoonam extends CommonFunctionsPoonam{
 
     @Before
     public void open(){
