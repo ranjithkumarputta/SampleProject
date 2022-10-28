@@ -8,7 +8,6 @@ import org.openqa.selenium.Keys;
 import pages.LoginPagesPoonam;
 import pages.PoonamAddProduct;
 import pages.PoonamEditProduct;
-
 import java.util.concurrent.TimeUnit;
 
 public class ProductStepsPoonam extends CommonFunctionsPoonam{
@@ -23,7 +22,7 @@ public class ProductStepsPoonam extends CommonFunctionsPoonam{
         lp.setEmailfld("admin@gic.com");
         lp.setPasswordfld("Admin123");
         lp.clickLogin();
-        driver.manage().timeouts().implicitlyWait(10,Timeunit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.navigate().to("http://3.13.126.58/AMS3.0/home");
 
     }

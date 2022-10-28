@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CommonStepsDiana;
 import pages.ElementsPageDiana;
-
 import java.util.List;
 
 public class InvoiceManagerDiana extends CommonStepsDiana {
