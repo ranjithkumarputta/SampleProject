@@ -5,11 +5,11 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CommonStepsDiana;
 import pages.ElementsPageDiana;
+
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class InvoiceManagerDiana extends CommonStepsDiana {
    ElementsPageDiana actions = new ElementsPageDiana(driver);
@@ -61,8 +61,9 @@ public class InvoiceManagerDiana extends CommonStepsDiana {
     @When("^I select Add Customer option in Customers$")
     public void i_select_Add_Customer_option_in_Customers() throws Throwable {
         actions.customer();
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"customers_add\"]")));
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//        WebDriverWait wait = new WebDriverWait(driver, 5);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"customers_add\"]")));
         actions.customerAdd();
     }
     @When("^I enter all required fields \"([^\"]*)\"$")
@@ -92,8 +93,9 @@ public class InvoiceManagerDiana extends CommonStepsDiana {
     @When("^I go to Customers List$")
     public void i_go_to_Customers_List() throws Throwable {
         actions.customer();
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"customers_index\"]")));
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//        WebDriverWait wait = new WebDriverWait(driver, 5);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"customers_index\"]")));
         actions.customerList();
     }
     @When("^check last entry to Customers Table$")
