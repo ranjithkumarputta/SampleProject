@@ -1,20 +1,20 @@
 package stepDefinations;
 
-import com.erp.pages.AddProduct;
-import com.erp.pages.EditProduct;
-import com.erp.pages.LoginPages;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import pages.LoginPagesPoonam;
+import pages.PoonamAddProduct;
+import pages.PoonamEditProduct;
 
 import java.util.concurrent.TimeUnit;
 
-public class ProductStepsPoonam extends CommonFunctions {
-    LoginPages lp = new LoginPages(driver);
-    AddProduct AP = new AddProduct(driver);
-    EditProduct EP = new EditProduct(driver);
+public class ProductStepsPoonam extends CommonFunctionsPoonam{
+    LoginPagesPoonam lp = new LoginPagesPoonam(driver);
+    PoonamAddProduct AP = new PoonamAddProduct(driver);
+    PoonamEditProduct EP = new PoonamEditProduct(driver);
 
 
         @Given("^I login to the application and on home page$")
@@ -23,7 +23,7 @@ public class ProductStepsPoonam extends CommonFunctions {
         lp.setEmailfld("admin@gic.com");
         lp.setPasswordfld("Admin123");
         lp.clickLogin();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10,Timeunit.SECONDS);
         driver.navigate().to("http://3.13.126.58/AMS3.0/home");
 
     }
