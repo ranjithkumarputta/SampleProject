@@ -112,4 +112,19 @@ public class InvoiceManagerDiana extends CommonStepsDiana {
     @Then("^I should be able to see my last entry as per @AddCustomer scenario$")
     public void i_should_be_able_to_see_my_last_entry_as_per_AddCustomer_scenario() throws Throwable {
     }
+    @When("^I enter valid UserName as \"([^\"]*)\" and valid password as \"([^\"]*)\"$")
+    public void i_enter_valid_UserName_as1and_valid_password_as1(String UserName, String password) throws Throwable {
+        actions.email(UserName);
+        actions.pass(password);
+    }
+    @When("^I enter valid UserName as \"([^\"]*)\" and valid password as \"([^\"]*)\"$")
+    public void i_enter_valid_UserName_as2_and_valid_password2_as(String UserName, String password) throws Throwable {
+        actions.email(UserName);
+        actions.pass(password);
+    }
+    @When("^I enter valid UserName as \"([^\"]*)\" and valid password as \"([^\"]*)\"$")
+    public void i_enter_valid_UserName3_as_and_valid_password_as(String UserName, String password) throws Throwable {
+        actions.email(UserName);
+        actions.pass(password);
+    }
 }
