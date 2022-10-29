@@ -28,11 +28,15 @@ public class LoginpagesSmitha {
         password.sendKeys(arg2);
         submitBtn.click();
     }
-    public void login2git(String arg1,String arg2){
+    public void login2(String arg1,String arg2){
         username.sendKeys(arg1);
         password.sendKeys(arg2);
         submitBtn.click();
     }
 
-
+    public void login3(String arg1,String arg2){
+        username.sendKeys(arg1);
+        password.sendKeys(arg2);
+        submitBtn.click();
+    }
 }
