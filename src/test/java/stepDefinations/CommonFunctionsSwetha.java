@@ -17,4 +17,14 @@ public class CommonFunctionsSwetha {
 
         driver.close();
     }
+    public void browserLaunch1(){
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.manage().window().maximize();
+    }
+    public void browserLaunch2(){
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.manage().window().maximize();
+    }
 }
