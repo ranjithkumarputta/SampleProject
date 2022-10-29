@@ -127,4 +127,20 @@ public class InvoiceManagerDiana extends CommonStepsDiana {
         actions.email(UserName);
         actions.pass(password);
     }
+    @Given("^I am on application homepage$")
+    public void i_am_on_application_homepage1() throws Throwable {
+        driver.get("http://3.13.126.58/AMS3.0/auth/login/");
+        actions.emailInput();
+        actions.passInput();
+        actions.clickLogIn();
+        driver.get("http://3.13.126.58/AMS3.0/home");
+    }
+    @Given("^I am on application homepage$")
+    public void i_am_on_application_homepage2() throws Throwable {
+        driver.get("http://3.13.126.58/AMS3.0/auth/login/");
+        actions.emailInput();
+        actions.passInput();
+        actions.clickLogIn();
+        driver.get("http://3.13.126.58/AMS3.0/home");
+    }
 }
