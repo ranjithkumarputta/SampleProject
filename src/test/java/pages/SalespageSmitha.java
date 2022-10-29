@@ -1,4 +1,4 @@
-package src.test.java.pages;
+package pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -8,14 +8,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
-public class Salespage {
+public class SalespageSmitha {
     private WebDriver driver;
-    public Salespage(WebDriver driver) {
+    public SalespageSmitha(WebDriver driver) {
         this.driver=driver;
         PageFactory.initElements(driver,this);
-}
+    }
     @FindBy(xpath = "//a[@class=\"mm_sales\"]")
     private WebElement saleclick;
     @FindBy(xpath = "//a[@id='sales_index']")
@@ -143,7 +144,7 @@ public class Salespage {
         updateinbtn.click();
     }
     public void downloadpdf(){
-    action(actiondrp);
+        action(actiondrp);
         downloadpdftxt.click();
     }
     public void emailinvoice(){
@@ -169,7 +170,7 @@ public class Salespage {
         action.moveToElement(element).click().perform();
     }
     private void wait( WebElement element){
-        WebDriverWait wait = new WebDriverWait(driver, 10000);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfAllElements(element));
     }
 

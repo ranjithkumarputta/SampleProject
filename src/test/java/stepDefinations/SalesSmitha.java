@@ -1,14 +1,14 @@
 package stepDefinations;
 
-import pages.Salespage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pages.SalespageSmitha;
 
-public class Sales  extends CommonFunction {
-    private Salespage saleobj;
-    public Sales()  {
-        saleobj= new Salespage(driver);
+public class SalesSmitha extends CommonFunctionSmitha {
+    private SalespageSmitha saleobj;
+    public SalesSmitha()  {
+        saleobj= new SalespageSmitha(driver);
     }
     @Given("^user on IM home page$")
     public void user_on_IM_home_page() throws Throwable {
@@ -82,7 +82,7 @@ public class Sales  extends CommonFunction {
     }
     @Then("^user should able to see popup page payment$")
     public void user_should_able_to_see_popup_page_payment() throws Throwable {
-       saleobj.paymentclose();
+        saleobj.paymentclose();
     }
     @When("^user clicks on add payment option$")
     public void user_clicks_on_add_payment_option() throws Throwable {
@@ -108,18 +108,18 @@ public class Sales  extends CommonFunction {
     }
     @When("^user clicks on download as pdf option$")
     public void user_clicks_on_download_as_pdf_option() throws Throwable {
-       Thread.sleep(1000);
+        Thread.sleep(1000);
         saleobj.downloadpdf();
-       Thread.sleep(1000);
+        Thread.sleep(1000);
     }
     @Then("^user should able to  perform download action$")
     public void user_should_able_to_perform_download_action() throws Throwable {
     }
     @When("^user clicks on email invoice option$")
     public void user_clicks_on_email_invoice_option() throws Throwable {
-       Thread.sleep(1000);
+        Thread.sleep(1000);
         saleobj.emailinvoice();
-      Thread.sleep(1000);
+        Thread.sleep(1000);
     }
     @Then("^user should able to  send invoice$")
     public void user_should_able_to_send_invoice() throws Throwable {
@@ -129,7 +129,7 @@ public class Sales  extends CommonFunction {
     public void user_clicks_on_delete_invoice_option() throws Throwable {
         Thread.sleep(1000);
         saleobj.deleteinvoice();
-       Thread.sleep(1000);
+        Thread.sleep(1000);
     }
     @Then("^user should able to  see popup message and able to close it$")
     public void user_should_able_to_see_popup_message_and_able_to_close_it() throws Throwable {
