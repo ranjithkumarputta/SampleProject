@@ -27,4 +27,8 @@ public class CommonFunctionsSwetha {
         driver=new ChromeDriver();
         driver.manage().window().maximize();
     }
+    public void browserLaunch4(){
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.manage().window().maximize();
 }
